@@ -19,5 +19,4 @@ COPY src ./src
 COPY --from=deps /usr/app .
 RUN npm install pm2 -g
 EXPOSE 5000
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
 CMD ["pm2-runtime","./src/index.js"]
